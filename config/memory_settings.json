@@ -1,0 +1,33 @@
+{
+  "_comment": "CARL Memory System Settings — Phase 17",
+
+  "session_memory_enabled": true,
+  "long_term_memory_enabled": true,
+  "learning_enabled": true,
+  "conversation_summary_enabled": true,
+  "auto_cleanup_enabled": true,
+  "context_injection_enabled": true,
+  "project_tracking_enabled": true,
+
+  "max_context_tokens": 1500,
+  "summary_interval": 25,
+  "cleanup_interval_hours": 6,
+  "max_stored_memories": 500,
+  "max_conversation_turns": 30,
+  "max_summaries": 50,
+
+  "importance": {
+    "temporary_expiry_hours": 24,
+    "normal_expiry_days": 7,
+    "promote_after_accesses": 5,
+    "decay_after_days_no_access": 30
+  },
+
+  "learning": {
+    "favorite_threshold": 5,
+    "track_apps": true,
+    "track_folders": true,
+    "track_tools": true,
+    "track_websites": true
+  }
+}

@@ -1,0 +1,964 @@
+{
+  "entries": [
+    {
+      "id": "conversation_summary_summary_1784186153_1784186153",
+      "category": "conversation_summary",
+      "key": "summary_1784186153",
+      "content": "User asked: பர் டே ஸ் ல பர் ட ே ஸ் பை னா அடானா. (2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784186153.4152575,
+      "updated_at": 1784186153.4152582,
+      "accessed_at": 1784569482.6571624,
+      "access_count": 17,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 4
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784218233_1784218233",
+      "category": "conversation_summary",
+      "key": "summary_1784218233",
+      "content": "User asked: Hello.; He llo can you he ar. (1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784218233.431101,
+      "updated_at": 1784218233.4311025,
+      "accessed_at": 1784569482.657181,
+      "access_count": 17,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 5
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784226152_1784226152",
+      "category": "conversation_summary",
+      "key": "summary_1784226152",
+      "content": "User asked: Hello.; Can you he ar me. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784226152.887581,
+      "updated_at": 1784226152.8875823,
+      "accessed_at": 1784569482.657186,
+      "access_count": 17,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 5
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784360420_1784360420",
+      "category": "conversation_summary",
+      "key": "summary_1784360420",
+      "content": "User asked: ఏం రా ండ్ ఫే మస్ కాకపోయినా పర్లేదు; ചായക്കി ടോപ്പി; ఏ దో ఒక టి ప ట్టు కో ఆ డ త ీ హో మ ం తిత్తో. Completed: Opened YouTube, sir.; I have opened YouTube to search for 'arthihom spu bala subramanyam', but manual selection is require. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784360420.073444,
+      "updated_at": 1784360420.0734444,
+      "accessed_at": 1784569482.6571894,
+      "access_count": 17,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 12
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784365664_1784365664",
+      "category": "conversation_summary",
+      "key": "summary_1784365664",
+      "content": "Completed: I cannot find definitive information regarding the founder of CARL.. (1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784365664.3886738,
+      "updated_at": 1784365664.388674,
+      "accessed_at": 1784569482.6571925,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 5
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784366728_1784366728",
+      "category": "conversation_summary",
+      "key": "summary_1784366728",
+      "content": "User asked: ട്രാൻസ്ഫറ. Completed: I was created by Dhatri.. (5 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784366728.8919234,
+      "updated_at": 1784366728.8919237,
+      "accessed_at": 1784569482.6571987,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 12
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784367420_1784367420",
+      "category": "conversation_summary",
+      "key": "summary_1784367420",
+      "content": "(2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784367420.6318755,
+      "updated_at": 1784367420.631876,
+      "accessed_at": 1784569482.6572022,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 8
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784368303_1784368303",
+      "category": "conversation_summary",
+      "key": "summary_1784368303",
+      "content": "Completed: Settings opened. I am unable to directly display the brightness range within the settings applicatio; Done.. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784368303.022561,
+      "updated_at": 1784368303.0285192,
+      "accessed_at": 1784569482.6572056,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 10
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784369929_1784369929",
+      "category": "conversation_summary",
+      "key": "summary_1784369929",
+      "content": "User asked: हा र्ट में मींस कलर होता है।; हेयर स्टाइल बच्चे. Completed: Done. I have set a reminder for \"pay my bills\" for tomorrow at 9 AM.. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784369929.212046,
+      "updated_at": 1784369929.2120466,
+      "accessed_at": 1784569482.6572094,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 10
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784373671_1784373672",
+      "category": "conversation_summary",
+      "key": "summary_1784373671",
+      "content": "Brief conversation with no major actions.",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784373672.000812,
+      "updated_at": 1784373672.0008125,
+      "accessed_at": 1784569482.6572134,
+      "access_count": 16,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 3
+      }
+    },
+    {
+      "id": "favorite_youtube_video_1784375212",
+      "category": "favorite",
+      "key": "youtube_video",
+      "content": "Frequently used tool: youtube_video",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784375212.3016267,
+      "updated_at": 1784375212.301627,
+      "accessed_at": 1784375212.3016272,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784375231_1784375231",
+      "category": "conversation_summary",
+      "key": "summary_1784375231",
+      "content": "Completed: I am CARL, sir. My acronym stands for Cognitive Autonomous Reasoning and Learning. I was created by; I am CARL, sir, The World's First AI Holographic Data Intelligence Operating System. I was created b. (3 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784375231.5648224,
+      "updated_at": 1784375231.5648227,
+      "accessed_at": 1784569482.6572216,
+      "access_count": 15,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 9
+      }
+    },
+    {
+      "id": "favorite_web_search_1784375256",
+      "category": "favorite",
+      "key": "web_search",
+      "content": "Frequently used tool: web_search",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784375256.4091978,
+      "updated_at": 1784375256.409198,
+      "accessed_at": 1784375256.409199,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "favorite_display_control_1784376151",
+      "category": "favorite",
+      "key": "display_control",
+      "content": "Frequently used tool: display_control",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784376151.283256,
+      "updated_at": 1784376151.2832563,
+      "accessed_at": 1784376151.2832563,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784376352_1784376352",
+      "category": "conversation_summary",
+      "key": "summary_1784376352",
+      "content": "Completed: Dhatri is my founder and creator, sir. Based on this context, it is likely that Dhatri is human.; Done, madam.. (6 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784376352.8350515,
+      "updated_at": 1784376352.8350518,
+      "accessed_at": 1784569482.6572335,
+      "access_count": 14,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 16
+      }
+    },
+    {
+      "id": "favorite_open_app_1784376627",
+      "category": "favorite",
+      "key": "open_app",
+      "content": "Frequently used tool: open_app",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784376627.873184,
+      "updated_at": 1784376627.8731842,
+      "accessed_at": 1784376627.8731844,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784379345_1784379345",
+      "category": "conversation_summary",
+      "key": "summary_1784379345",
+      "content": "(4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784379345.8454812,
+      "updated_at": 1784379345.8454823,
+      "accessed_at": 1784569482.6572387,
+      "access_count": 13,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 3
+      }
+    },
+    {
+      "id": "favorite_file_intake_1784380049",
+      "category": "favorite",
+      "key": "file_intake",
+      "content": "Frequently used tool: file_intake",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784380049.0364757,
+      "updated_at": 1784380049.036476,
+      "accessed_at": 1784380049.0364761,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784380276_1784380276",
+      "category": "conversation_summary",
+      "key": "summary_1784380276",
+      "content": "(2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784380276.9263723,
+      "updated_at": 1784380276.9263725,
+      "accessed_at": 1784569482.6572433,
+      "access_count": 13,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 6
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784380790_1784380790",
+      "category": "conversation_summary",
+      "key": "summary_1784380790",
+      "content": "(2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784380790.6339927,
+      "updated_at": 1784380790.633993,
+      "accessed_at": 1784569482.6572452,
+      "access_count": 13,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 5
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784388797_1784388797",
+      "category": "conversation_summary",
+      "key": "summary_1784388797",
+      "content": "User made 4 requests including: Hello.; Hello. Hello.; Can you he ar me",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784388797.6165323,
+      "updated_at": 1784388797.6165326,
+      "accessed_at": 1784569482.6572473,
+      "access_count": 12,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 11
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784389233_1784389233",
+      "category": "conversation_summary",
+      "key": "summary_1784389233",
+      "content": "User made 11 requests including: Hello car.; Can you hear me ?; What ? Who are you?. Completed: No duplicates were found in the dataset, sir.; The primary problems found were missing values, sir: 177 missing in 'Age', 687 in 'Cabin', and 2 in. (2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784389233.6248968,
+      "updated_at": 1784389233.624897,
+      "accessed_at": 1784569482.6572492,
+      "access_count": 12,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 25
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784389303_1784389303",
+      "category": "conversation_summary",
+      "key": "summary_1784389303",
+      "content": "User asked: How di d you cle an the data set; इज द डे टा से ट फुल्ली क्लीन; Okay show me.",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784389303.4763954,
+      "updated_at": 1784389303.4763956,
+      "accessed_at": 1784569482.6572516,
+      "access_count": 11,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 31
+      }
+    },
+    {
+      "id": "favorite_file_controller_1784389381",
+      "category": "favorite",
+      "key": "file_controller",
+      "content": "Frequently used tool: file_controller",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784389381.4665425,
+      "updated_at": 1784389381.4665425,
+      "accessed_at": 1784389381.466543,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784389892_1784389892",
+      "category": "conversation_summary",
+      "key": "summary_1784389892",
+      "content": "User made 12 requests including: so whe re is the clean file; I guess you don' t know; ഷോ മീൻ ഇൻ ദ ഫൈ ഫൈ ഫോൾഡ്. (9 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784389892.0227146,
+      "updated_at": 1784389892.0227149,
+      "accessed_at": 1784569482.6572554,
+      "access_count": 10,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 56
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784390192_1784390192",
+      "category": "conversation_summary",
+      "key": "summary_1784390192",
+      "content": "User made 11 requests including: Hello.; Hello.; Hello.. Completed: Mute failed, sir. I am unable to perform that action.; The audit did not detect any errors in the 'Ticket' column, sir. The dataset quality score is 97/100. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784390192.3089907,
+      "updated_at": 1784390192.308991,
+      "accessed_at": 1784569482.6572573,
+      "access_count": 9,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 81
+      }
+    },
+    {
+      "id": "favorite_data_cleaning_1784392311",
+      "category": "favorite",
+      "key": "data_cleaning",
+      "content": "Frequently used tool: data_cleaning",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784392311.546599,
+      "updated_at": 1784392311.5465994,
+      "accessed_at": 1784392311.5465994,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784392446_1784392446",
+      "category": "conversation_summary",
+      "key": "summary_1784392446",
+      "content": "User made 11 requests including: Hello.; Hello.; आई वांट टू अपलोड अ फाइल. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784392446.0331075,
+      "updated_at": 1784392446.0331078,
+      "accessed_at": 1784569482.657261,
+      "access_count": 8,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 23
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784394018_1784394018",
+      "category": "conversation_summary",
+      "key": "summary_1784394018",
+      "content": "User asked: Hello.; And I want to upload a file.; I want you to cle an the fi le .. (1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784394018.84564,
+      "updated_at": 1784394018.845641,
+      "accessed_at": 1784569482.6572628,
+      "access_count": 7,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 7
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784394713_1784394713",
+      "category": "conversation_summary",
+      "key": "summary_1784394713",
+      "content": "(1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784394713.8382623,
+      "updated_at": 1784394713.8382626,
+      "accessed_at": 1784569482.657265,
+      "access_count": 7,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 3
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784395727_1784395727",
+      "category": "conversation_summary",
+      "key": "summary_1784395727",
+      "content": "(2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784395727.0917618,
+      "updated_at": 1784395727.091763,
+      "accessed_at": 1784569482.6572669,
+      "access_count": 7,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 3
+      }
+    },
+    {
+      "id": "favorite_smart_data_scientist_1784395995",
+      "category": "favorite",
+      "key": "smart_data_scientist",
+      "content": "Frequently used tool: smart_data_scientist",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784395995.1661243,
+      "updated_at": 1784395995.1661246,
+      "accessed_at": 1784395995.1661248,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784396206_1784396206",
+      "category": "conversation_summary",
+      "key": "summary_1784396206",
+      "content": "(2 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784396206.2986245,
+      "updated_at": 1784396206.298625,
+      "accessed_at": 1784569482.657275,
+      "access_count": 7,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 6
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784396644_1784396644",
+      "category": "conversation_summary",
+      "key": "summary_1784396644",
+      "content": "User made 11 requests including: व्हा ई डाय बि टी स पे डि ग्री फं क्शन मि नि मम वै ल्यू इज जीरो; I want you to cle an the data set.; फ र्स्ट सर्व ाइ वल आई वांट टू नो हाउ मे नी वे स्ट सर्वाइव्ड. (6 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784396644.2634573,
+      "updated_at": 1784396644.2634578,
+      "accessed_at": 1784569482.657278,
+      "access_count": 6,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 31
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784396946_1784396946",
+      "category": "conversation_summary",
+      "key": "summary_1784396946",
+      "content": "User made 12 requests including: the pas Okay continue.; डि ड यू इं क्लूड दिस फी चर और रि मूव दिस फीचर; Do you thi nk this was important to be included. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784396946.8725305,
+      "updated_at": 1784396946.8725307,
+      "accessed_at": 1784569482.6572802,
+      "access_count": 5,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 56
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784397726_1784397726",
+      "category": "conversation_summary",
+      "key": "summary_1784397726",
+      "content": "User asked: So the pri ori ty is gi ven more to the first class.; Can you tra in and sp lit the da ta. (12 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784397726.9086657,
+      "updated_at": 1784397726.9086661,
+      "accessed_at": 1784569482.6572835,
+      "access_count": 4,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 70
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784399245_1784399245",
+      "category": "conversation_summary",
+      "key": "summary_1784399245",
+      "content": "(1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784399245.4060986,
+      "updated_at": 1784399245.4060988,
+      "accessed_at": 1784569482.657286,
+      "access_count": 4,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 3
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784399659_1784399659",
+      "category": "conversation_summary",
+      "key": "summary_1784399659",
+      "content": "(6 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784399659.7907774,
+      "updated_at": 1784399659.790779,
+      "accessed_at": 1784569482.657288,
+      "access_count": 3,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 13
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784400731_1784400731",
+      "category": "conversation_summary",
+      "key": "summary_1784400731",
+      "content": "Completed: The autonomous ML pipeline encountered a technical error. I will proceed with a structured step-by-s; Understood. Although the automated pipeline encountered an error, the preparatory steps have been su. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784400731.1876287,
+      "updated_at": 1784400731.187629,
+      "accessed_at": 1784569482.6572905,
+      "access_count": 3,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 9
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784443609_1784443609",
+      "category": "conversation_summary",
+      "key": "summary_1784443609",
+      "content": "(1 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784443609.482228,
+      "updated_at": 1784443609.4822292,
+      "accessed_at": 1784569482.6572926,
+      "access_count": 2,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 13
+      }
+    },
+    {
+      "id": "favorite_file_processor_1784566317",
+      "category": "favorite",
+      "key": "file_processor",
+      "content": "Frequently used tool: file_processor",
+      "importance": 3,
+      "tags": [
+        "tool",
+        "learned"
+      ],
+      "created_at": 1784566317.776501,
+      "updated_at": 1784566317.7765024,
+      "accessed_at": 1784566317.7765024,
+      "access_count": 0,
+      "source": "learning",
+      "project": "",
+      "metadata": {}
+    },
+    {
+      "id": "conversation_summary_summary_1784566415_1784566415",
+      "category": "conversation_summary",
+      "key": "summary_1784566415",
+      "content": "Completed: I was unable to find any news results for 'tech news', sir.. (4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784566415.4964547,
+      "updated_at": 1784566415.4964554,
+      "accessed_at": 1784569482.6572964,
+      "access_count": 2,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 10
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784568345_1784568345",
+      "category": "conversation_summary",
+      "key": "summary_1784568345",
+      "content": "(4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784568345.506206,
+      "updated_at": 1784568345.5062063,
+      "accessed_at": 1784569482.6572993,
+      "access_count": 1,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 8
+      }
+    },
+    {
+      "id": "conversation_summary_summary_1784569482_1784569482",
+      "category": "conversation_summary",
+      "key": "summary_1784569482",
+      "content": "(4 min conversation)",
+      "importance": 2,
+      "tags": [
+        "conversation",
+        "summary",
+        "auto"
+      ],
+      "created_at": 1784569482.629258,
+      "updated_at": 1784569482.6292584,
+      "accessed_at": 1784569482.6573014,
+      "access_count": 1,
+      "source": "summarizer",
+      "project": "",
+      "metadata": {
+        "turns_summarized": 25,
+        "total_turns_at_summary": 6
+      }
+    }
+  ],
+  "projects": {},
+  "usage_counts": {
+    "tool:system_status": 4,
+    "tool:open_app": 8,
+    "app:youtube": 1,
+    "tool:youtube_video": 5,
+    "tool:web_search": 16,
+    "tool:display_control": 5,
+    "app:settings": 1,
+    "app:whatsapp": 1,
+    "tool:computer_control": 3,
+    "app:c:\\users\\admin\\desktop\\jarvis_screenshot.png": 1,
+    "tool:reminder": 2,
+    "tool:weather_report": 2,
+    "tool:battery_status": 1,
+    "app:spotify": 1,
+    "tool:file_intake": 13,
+    "tool:file_processor": 5,
+    "tool:data_cleaning": 5,
+    "tool:file_controller": 5,
+    "app:c:/users/admin/downloads/titanic-dataset (1)_cleaned.csv": 2,
+    "tool:window_manager": 2,
+    "app:excel": 1,
+    "tool:audio_control": 1,
+    "tool:smart_data_scientist": 15,
+    "tool:ml_preparation": 1,
+    "tool:ml_pipeline": 3
+  }
+}

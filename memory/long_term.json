@@ -1,0 +1,49 @@
+{
+  "identity": {
+    "language": {
+      "value": "Turkish",
+      "updated": "2026-07-16"
+    },
+    "preferred_title": {
+      "value": "madam",
+      "updated": "2026-07-18"
+    },
+    "creator_name": {
+      "value": "Dhatri",
+      "updated": "2026-07-18"
+    },
+    "age": {
+      "value": "20",
+      "updated": "2026-07-18"
+    },
+    "date_of_birth": {
+      "value": "2006-06-21",
+      "updated": "2026-07-18"
+    },
+    "carl_acronym_meaning": {
+      "value": "Cognitive Autonomous Reasoning & Learning",
+      "updated": "2026-07-18"
+    },
+    "full_form": {
+      "value": "The World's First AI Holographic Data Intelligence Operating System",
+      "updated": "2026-07-18"
+    },
+    "creator_description": {
+      "value": "my founder, the one who created me",
+      "updated": "2026-07-18"
+    },
+    "creator_gender": {
+      "value": "female",
+      "updated": "2026-07-18"
+    },
+    "gender": {
+      "value": "female",
+      "updated": "2026-07-20"
+    }
+  },
+  "preferences": {},
+  "projects": {},
+  "relationships": {},
+  "wishes": {},
+  "notes": {}
+}
