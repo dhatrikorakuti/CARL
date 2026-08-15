@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Carl - Intelligent Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #f1f5f9; 
+            font-family: 'Inter', sans-serif; 
+            overflow: hidden; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .silver-pill {
+            background: rgba(18, 22, 30, 0.75);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(203, 213, 225, 0.2);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+        }
+        .silver-glow { box-shadow: 0 0 30px rgba(226, 232, 240, 0.15); }
+        .classic-title { font-family: 'Cinzel', serif; letter-spacing: 0.14em; }
+        
+        #spline-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100vw;
+            height: calc(100vh + 55px);
+            transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out;
+            pointer-events: auto;
+            z-index: 0;
+        }
+        .spline-dimmed {
+            opacity: 0.22 !important;
+            filter: blur(4px);
+        }
+
+        #chat-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .sidebar-open #chat-sidebar {
+            transform: translateX(0);
+        }
+
+        #drop-overlay { display: none; }
+    </style>
+</head>
+<body class="relative h-screen w-screen overflow-hidden select-none bg-black" id="drop-zone">
+
+    <!-- Drag & Drop Fullscreen Overlay -->
+    <div id="drop-overlay" class="absolute inset-0 bg-black/92 backdrop-blur-md z-50 flex flex-col items-center justify-center border-4 border-dashed border-slate-400">
+        <div class="text-5xl mb-3 text-slate-300">📁</div>
+        <p class="text-2xl font-bold text-slate-200 tracking-wide">Drop your dataset or documents here</p>
+    </div>
+
+    <!-- Hidden Generic File Inputs -->
+    <input type="file" id="file-input" accept=".csv,.parquet" class="hidden" onchange="uploadFile(this.files[0])">
+    <input type="file" id="doc-input" accept=".csv,.xlsx,.pdf,.pptx,.txt" class="hidden" onchange="uploadFile(this.files[0])">
+    <input type="file" id="media-input" accept=".jpeg,.jpg,.png,.mp4" class="hidden" onchange="handleMediaUpload(this.files[0])">
+
+    <!-- SPLINE 3D ROBOT WRAPPER -->
+    <div id="spline-wrapper">
+        <iframe 
+            src="https://my.spline.design/genkubgreetingrobot-3zahuYVQ9WxAHz1BLAyUW89l/" 
+            frameborder="0" 
+            class="w-full h-full border-none">
+        </iframe>
+    </div>
+
+    <!-- TOP HEADER -->
+    <header class="absolute top-6 left-0 right-0 max-w-6xl mx-auto px-6 flex justify-between items-center z-20 pointer-events-auto">
+        <!-- Left: Three Lines (Hamburger) Trigger -->
+        <div class="relative group" onmouseenter="openSidebar()" onclick="openSidebar()">
+            <button class="silver-pill px-3.5 py-2.5 rounded-2xl flex flex-col justify-center items-center space-y-1.5 hover:border-slate-300 transition">
+                <span class="w-5 h-0.5 bg-slate-200 rounded"></span>
+                <span class="w-5 h-0.5 bg-slate-200 rounded"></span>
+                <span class="w-5 h-0.5 bg-slate-200 rounded"></span>
+            </button>
+        </div>
+
+        <!-- Right: Upload CSV Button -->
+        <button onclick="document.getElementById('file-input').click()" 
+                class="silver-pill px-6 py-2.5 rounded-2xl text-sm font-bold text-slate-200 hover:text-white border-slate-400/40 hover:border-slate-300 transition transform hover:scale-105 flex items-center space-x-2 silver-glow">
+            <span>📁</span>
+            <span>Upload CSV</span>
+        </button>
+    </header>
+
+    <!-- LEFT SLIDE-OUT CHAT HISTORY SIDEBAR -->
+    <aside id="chat-sidebar" onmouseleave="closeSidebar()" 
+           class="absolute top-0 left-0 h-full w-72 bg-neutral-950/90 backdrop-blur-2xl border-r border-slate-800 z-40 p-6 flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-sm font-bold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+                    <span>💬</span> <span>Chat History</span>
+                </h2>
+                <button onclick="closeSidebar()" class="text-slate-500 hover:text-slate-200 text-xs">✕</button>
+            </div>
+            
+            <button onclick="startNewChat()" class="w-full mb-4 py-2 px-3 rounded-xl silver-pill text-xs font-semibold text-slate-200 hover:border-slate-300 transition flex items-center justify-center space-x-2">
+                <span>+</span> <span>New Chat</span>
+            </button>
+
+            <!-- Stored Chat Sessions -->
+            <div id="history-list" class="space-y-2 overflow-y-auto max-h-[70vh] text-xs text-slate-400">
+                <div class="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition truncate">📊 Default Dataset Analysis</div>
+            </div>
+        </div>
+        <p class="text-[10px] text-slate-600">Carl Intelligence Engine v2.0</p>
+    </aside>
+
+    <!-- CENTER MESSAGES CONTAINER -->
+    <main id="chat-stream" class="absolute top-24 bottom-32 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-y-auto px-4 z-10 space-y-3 pointer-events-auto hidden">
+    </main>
+
+    <!-- BOTTOM INPUT SECTION -->
+    <footer class="absolute bottom-6 left-0 right-0 max-w-2xl mx-auto px-4 z-20 space-y-3 pointer-events-auto">
+        
+        <!-- Classic Title Greeting -->
+        <div id="hero-greeting" class="text-center transition-opacity duration-300">
+            <h1 class="classic-title text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 drop-shadow-[0_0_18px_rgba(255,255,255,0.35)]">
+                Hey! I am Carl
+            </h1>
+        </div>
+
+        <!-- Attachment Plus Menu Popover -->
+        <div id="attach-menu" class="hidden absolute bottom-20 left-4 w-52 bg-neutral-900/95 border border-slate-700/60 rounded-2xl p-2 shadow-2xl space-y-1 text-xs text-slate-300">
+            <div onclick="triggerDocUpload()" class="p-2 hover:bg-slate-800/80 rounded-xl cursor-pointer flex items-center space-x-3 transition">
+                <span class="text-indigo-400 text-sm">📄</span>
+                <span>Document (CSV, XLSX, PDF, PPTX)</span>
+            </div>
+            <div onclick="triggerMediaUpload()" class="p-2 hover:bg-slate-800/80 rounded-xl cursor-pointer flex items-center space-x-3 transition">
+                <span class="text-sky-400 text-sm">🖼️</span>
+                <span>Photos & Videos</span>
+            </div>
+        </div>
+
+        <!-- Bottom Chat Bar with Voice & Plus Button -->
+        <div class="silver-pill p-2 rounded-2xl flex items-center space-x-2.5 silver-glow">
+            
+            <!-- Plus (+) Attachment Button -->
+            <button onclick="toggleAttachMenu()" class="w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800/60 transition text-lg font-bold">
+                +
+            </button>
+
+            <!-- Voice Listener (Mic) Button -->
+            <button id="mic-btn" onclick="toggleVoiceCommander()" class="w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:bg-slate-800/60 transition">
+                <svg id="mic-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 02-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+            </button>
+
+            <!-- Text Input -->
+            <input type="text" id="user-prompt" placeholder="Ask Carl anything or tap the mic to speak..." 
+                   class="flex-grow bg-transparent border-none text-sm text-slate-100 placeholder-slate-500 focus:outline-none px-2"
+                   onkeydown="if(event.key==='Enter') sendPrompt()">
+
+            <!-- Send Button -->
+            <button onclick="sendPrompt()" class="bg-gradient-to-r from-slate-200 to-slate-300 hover:from-white hover:to-slate-200 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs transition shadow-lg shadow-white/10 transform active:scale-95">
+                Execute
+            </button>
+        </div>
+
+        <p class="text-center text-[10px] text-slate-500 tracking-wider">
+            Carl AI can make mistakes. Verify important analytical and financial outputs.
+        </p>
+    </footer>
+
+    <!-- LOGIC SCRIPT -->
+    <script>
+        let isChatActive = false;
+        let currentReport = null;
+        let isListening = false;
+        let recognition = null;
+        
+        // 1-Minute Interaction Tracking
+        let lastInteractionTime = 0;
+        const ONE_MINUTE_MS = 60 * 1000;
+
+        function formatBossAddress(text) {
+            const now = Date.now();
+            const shouldCallBoss = (lastInteractionTime === 0) || (now - lastInteractionTime >= ONE_MINUTE_MS);
+            lastInteractionTime = now;
+
+            // Strip existing boss prefixes if present to prevent duplication
+            let clean = text.replace(/^(boss,?\s*|right away,?\s*boss,?\s*)/i, '').trim();
+
+            if (shouldCallBoss) {
+                return `Boss, ${clean.charAt(0).toLowerCase() + clean.slice(1)}`;
+            } else {
+                return clean.charAt(0).toUpperCase() + clean.slice(1);
+            }
+        }
+
+        // 1. SIDEBAR INTERACTION
+        function openSidebar() {
+            document.body.classList.add('sidebar-open');
+        }
+        function closeSidebar() {
+            document.body.classList.remove('sidebar-open');
+        }
+        function startNewChat() {
+            document.getElementById('chat-stream').innerHTML = '';
+            document.getElementById('chat-stream').classList.add('hidden');
+            document.getElementById('hero-greeting').classList.remove('opacity-0', 'hidden');
+            document.getElementById('spline-wrapper').classList.remove('spline-dimmed');
+            isChatActive = false;
+            lastInteractionTime = 0;
+            closeSidebar();
+        }
+
+        // 2. ATTACHMENT MENU
+        function toggleAttachMenu() {
+            const menu = document.getElementById('attach-menu');
+            menu.classList.toggle('hidden');
+        }
+        function triggerDocUpload() {
+            toggleAttachMenu();
+            document.getElementById('doc-input').click();
+        }
+        function triggerMediaUpload() {
+            toggleAttachMenu();
+            document.getElementById('media-input').click();
+        }
+        function handleMediaUpload(file) {
+            if (!file) return;
+            activateChatInterface();
+            appendMessage("You", `Uploaded media: [${file.name}]`);
+            const reply = formatBossAddress(`I have received your media file ${file.name}.`);
+            appendMessage("Carl AI", reply);
+            speakCarlResponse(reply);
+        }
+
+        // 3. CHAT ACTIVATION
+        function activateChatInterface() {
+            if (!isChatActive) {
+                isChatActive = true;
+                document.getElementById('hero-greeting').classList.add('opacity-0', 'hidden');
+                document.getElementById('spline-wrapper').classList.add('spline-dimmed');
+                document.getElementById('chat-stream').classList.remove('hidden');
+            }
+        }
+
+        function appendMessage(sender, text) {
+            activateChatInterface();
+            const stream = document.getElementById('chat-stream');
+            const isUser = sender === "You";
+            
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `p-3.5 rounded-2xl silver-pill text-xs leading-relaxed max-w-[85%] ${isUser ? 'ml-auto border-slate-500/40 text-slate-100 bg-white/10' : 'mr-auto border-slate-400/20 text-slate-200'}`;
+            msgDiv.innerHTML = `<span class="font-bold block mb-1 text-slate-300">${sender}</span><span>${text}</span>`;
+            
+            stream.appendChild(msgDiv);
+            stream.scrollTop = stream.scrollHeight;
+        }
+
+        // 4. TWO-WAY VOICE COMMANDER
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            recognition.onresult = (e) => {
+                const transcript = e.results[0][0].transcript;
+                document.getElementById('user-prompt').value = transcript;
+                sendPrompt();
+            };
+
+            recognition.onend = () => {
+                isListening = false;
+                document.getElementById('mic-btn').classList.remove('text-emerald-400', 'animate-pulse');
+            };
+        }
+
+        function toggleVoiceCommander() {
+            if (!recognition) {
+                alert("Speech recognition is not supported in this browser. Please use Chrome/Edge.");
+                return;
+            }
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.start();
+                isListening = true;
+                document.getElementById('mic-btn').classList.add('text-emerald-400', 'animate-pulse');
+            }
+        }
+
+        function speakCarlResponse(text) {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+            
+            const speechText = text.replace(/[*_`#]/g, '').trim();
+            const utter = new SpeechSynthesisUtterance(speechText);
+            const voices = window.speechSynthesis.getVoices();
+            
+            const maleVoice = voices.find(v => (v.name.includes("Male") || v.name.includes("David") || v.name.includes("Guy") || v.name.includes("George")) && v.lang.startsWith("en"));
+            if (maleVoice) utter.voice = maleVoice;
+            
+            utter.pitch = 0.90;
+            utter.rate = 1.0;
+            window.speechSynthesis.speak(utter);
+        }
+
+        // 5. QUERY EXECUTION & API CALLS
+        async function sendPrompt() {
+            const input = document.getElementById('user-prompt');
+            const query = input.value.trim();
+            if (!query) return;
+
+            appendMessage("You", query);
+            input.value = '';
+
+            if (!currentReport) {
+                const resp = formatBossAddress("Please upload or drop a CSV dataset first so I can analyze it for you.");
+                appendMessage("Carl AI", resp);
+                speakCarlResponse(resp);
+                return;
+            }
+
+            setTimeout(async () => {
+                try {
+                    const res = await fetch(`/api/predict?target_col=${encodeURIComponent(currentReport.auto_detected_target)}`);
+                    const data = await res.json();
+                    if (data.status === 'success') {
+                        const pred = data.prediction;
+                        const drivers = pred.top_key_factors.map(f => `${f[0]} (${f[1]})`).join(', ');
+                        const rawText = `Target identified as '${pred.target}'. Mode is ${pred.task_type} with an accuracy score of ${pred.accuracy_score}. Key drivers: ${drivers}.`;
+                        const carlText = formatBossAddress(rawText);
+                        appendMessage("Carl AI", carlText);
+                        speakCarlResponse(carlText);
+                    }
+                } catch (err) {
+                    const errMsg = formatBossAddress("Execution encountered an error: " + err);
+                    appendMessage("Carl AI", errMsg);
+                }
+            }, 600);
+        }
+
+        async function uploadFile(file) {
+            if (!file) return;
+            appendMessage("System", `Processing uploaded file: '${file.name}'...`);
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const res = await fetch('/api/upload', { method: 'POST', body: formData });
+                const data = await res.json();
+                if (data.status === 'success') {
+                    currentReport = data.report;
+                    const resp = formatBossAddress(`Dataset loaded successfully! Found ${currentReport.total_rows} rows and ${currentReport.total_columns} columns. Target set to '${currentReport.auto_detected_target}'.`);
+                    appendMessage("Carl AI", resp);
+                    speakCarlResponse(resp);
+                }
+            } catch (err) {
+                appendMessage("Error", err);
+            }
+        }
+
+        // 6. DRAG AND DROP
+        const dropZone = document.getElementById('drop-zone');
+        const dropOverlay = document.getElementById('drop-overlay');
+
+        ['dragenter', 'dragover'].forEach(e => {
+            dropZone.addEventListener(e, (evt) => { evt.preventDefault(); dropOverlay.style.display = 'flex'; }, false);
+        });
+        ['dragleave', 'drop'].forEach(e => {
+            dropZone.addEventListener(e, (evt) => { evt.preventDefault(); dropOverlay.style.display = 'none'; }, false);
+        });
+        dropZone.addEventListener('drop', (e) => {
+            if (e.dataTransfer.files.length) uploadFile(e.dataTransfer.files[0]);
+        });
+    </script>
+</body>
+</html>
