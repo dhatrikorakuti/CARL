@@ -1,0 +1,36 @@
+{
+  "_comment": "CARL Voice Identity — Permanent Configuration",
+
+  "gemini_live": {
+    "voice_name": "Puck",
+    "_voice_options": ["Puck", "Charon", "Kore", "Fenrir", "Aoede", "Leda", "Orus", "Vale"],
+    "_note": "Puck is the deepest male voice in Gemini Live. This is CARL's permanent voice."
+  },
+
+  "edge_tts": {
+    "voice": "en-GB-RyanNeural",
+    "rate": "-12%",
+    "pitch": "-4st",
+    "_note": "Deep British male baritone. Slower pace (-12%) and lower pitch (-4st) for calm authority."
+  },
+
+  "kokoro": {
+    "voice": "bm_daniel",
+    "speed": 0.87,
+    "_note": "British male (bm_ prefix). Speed 0.87 for deliberate, measured delivery."
+  },
+
+  "elevenlabs": {
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "stability": 0.7,
+    "similarity_boost": 0.85,
+    "_note": "Adam voice — deep, warm British male. Higher stability for consistent calm tone."
+  },
+
+  "speaking_style": {
+    "speed_factor": 0.87,
+    "tone": "deep_calm_authoritative",
+    "accent": "british_baritone",
+    "_note": "CARL's permanent voice identity. Never rushed. Always composed."
+  }
+}
